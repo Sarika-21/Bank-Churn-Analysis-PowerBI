@@ -9,6 +9,9 @@ This file contains the main DAX measures used in the Bank Customer Churn Analysi
 ```DAX
 Total Customers = COUNTROWS(Bank_Churn)
 
+## 2. Exited Customers
+
+```DAX
 Exited Customers =
 CALCULATE(
     [Total Customers],
