@@ -1,6 +1,6 @@
 # DAX Measures
 
-This file contains the main DAX measures used in the Bank Customer Churn Analysis Power BI dashboard.
+This file contains the main DAX measures and Calculated columns used in the Bank Customer Churn Analysis Power BI dashboard.
 
 ---
 
@@ -61,10 +61,10 @@ Avg_balance = AVERAGE(Bank_Churn[Balance])
 ```DAX
 Avg_salary = AVERAGE(Bank_Churn[EstimatedSalary])
 ```
-```markdown
+
 # Calculated Columns
-```
-## Customer Age Group
+---
+## 1. Customer Age Group
 
 ```DAX
 Customer Age Group =
@@ -77,18 +77,24 @@ IF(
         "Senior"
     )
 )
+```
+## 2. Tenure Category
 
+```DAX
 Tenure Category =
 IF(
     Bank_Churn[Tenure] <= 5,
     "Short Tenure",
     "Long Tenure"
 )
+```
+## 3. Balance Status
 
+```DAX
 Balance Status =
 IF(
     Bank_Churn[Balance] = 0,
     "Zero Balance",
     "Has Balance"
 )
-
+```
