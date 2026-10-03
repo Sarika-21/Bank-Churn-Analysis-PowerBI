@@ -53,7 +53,7 @@ The Churn Analysis page contains:
 - Average Balance by Age
 - Interactive filters for customer attributes
 
-![Churn Analysis](Output-Screenshots/2.churn-analysis.png)
+![Churn Analysis](Output-Screenshots/2.churn_analysis.png)
 
 ---
 
