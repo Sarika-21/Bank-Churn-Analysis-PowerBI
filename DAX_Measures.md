@@ -61,9 +61,9 @@ Avg_balance = AVERAGE(Bank_Churn[Balance])
 ```DAX
 Avg_salary = AVERAGE(Bank_Churn[EstimatedSalary])
 ```
-
-# Calculated Columns
 ---
+# Calculated Columns
+
 ## 1. Customer Age Group
 
 ```DAX
