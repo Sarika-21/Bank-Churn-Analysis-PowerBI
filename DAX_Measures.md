@@ -8,7 +8,7 @@ This file contains the main DAX measures used in the Bank Customer Churn Analysi
 
 ```DAX
 Total Customers = COUNTROWS(Bank_Churn)
-
+```
 ## 2. Exited Customers
 
 ```DAX
@@ -17,21 +17,30 @@ CALCULATE(
     [Total Customers],
     Bank_Churn[Exited] = 1
 )
+```
+## 3. Retention Rate
 
+```DAX
 Retention Rate =
 DIVIDE(
     [Total Customers] - [Exited Customers],
     [Total Customers],
     0
 )
+```
+## 4. Churn Rate
 
+```DAX
 Churn Rate =
 DIVIDE(
     [Exited Customers],
     [Total Customers],
     0
 )
+```
+## 5. Active member Rate
 
+```DAX
 Active Member Rate =
 DIVIDE(
     CALCULATE(
@@ -41,11 +50,17 @@ DIVIDE(
     [Total Customers],
     0
 )
+```
+## 6. Average Balance
 
+```DAX
 Avg_balance = AVERAGE(Bank_Churn[Balance])
+```
+## 7. Average Salary
 
+```DAX
 Avg_salary = AVERAGE(Bank_Churn[EstimatedSalary])
-
+```
 ```markdown
 # Calculated Columns
 
