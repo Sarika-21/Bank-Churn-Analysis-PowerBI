@@ -63,7 +63,7 @@ Avg_salary = AVERAGE(Bank_Churn[EstimatedSalary])
 ```
 ```markdown
 # Calculated Columns
-
+```
 ## Customer Age Group
 
 ```DAX
